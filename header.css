@@ -1,0 +1,336 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --primary-color: #e30674;
+  --primary-color-dark: #6d033d;
+  --text-dark: #352f34;
+  --text-light: #725b6d;
+  --extra-light: #fbf7f6;
+  --white: #fff;
+  --max-width: 1200px;
+  --header-font: "Merriweather", serif;
+  --logo-font: "Sour Gummy", sans-serif;
+  --text-font: "Poppins", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.header__navbar {
+  position: sticky;
+  box-shadow: -1px 7px 6px -2px rgba(2, 2, 2, 0.45);
+  -webkit-box-shadow: -1px 7px 6px -2px rgba(2, 2, 2, 0.45);
+  -moz-box-shadow: -1px 7px 6px -2px rgba(2, 2, 2, 0.45);
+}
+
+.nav__container {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+}
+
+.logo__section {
+  border-right: 1px solid var(--primary-color);
+  padding: 1rem 3rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo__section img {
+  width: 100%;
+}
+
+.logo__section h1 {
+  font-family: var(--logo-font);
+  font-size: 1.8rem;
+  font-style: italic;
+  color: var(--text-dark);
+}
+
+.logo__section h1 span {
+  color: var(--primary-color);
+}
+
+.nav__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.top__bar {
+  padding: 1.4rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 2rem;
+  border-bottom: 1px solid var(--primary-color);
+}
+
+.top__bar .social__medias {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.top__bar .social__medias a {
+  padding: 0.5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.top__bar .social__medias a i {
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  color: var(--text-light);
+  border: 1px solid var(--primary-color);
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+.top__bar .social__medias a:hover i {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.top__bar .top__btn a {
+  text-decoration: none;
+  display: block;
+  padding: 1rem 2rem;
+  background-color: var(--primary-color);
+  color: var(--white);
+  word-wrap: nowrap;
+  font-family: var(--header-font);
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 4px;
+  transform: scale(100%);
+  transition: all 0.5s ease-in-out;
+}
+
+.top__bar .top__btn a:hover {
+  transform: scale(90%);
+}
+
+.main__navbar {
+  padding-inline: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main__navbar ul {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.main__navbar ul li {
+  padding: 1.7rem 1.5rem;
+}
+
+.main__navbar ul li a {
+  padding: 1.7rem 1rem;
+  color: var(--text-dark);
+  font-family: var(--header-font);
+  font-size: 1rem;
+  font-weight: 500;
+  border-bottom: 3px solid transparent;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.nav__link__btn i {
+  font-size: 1rem;
+  padding-right: 0.5rem;
+  color: var(--primary-color);
+}
+
+.nav__link__btn span {
+  word-wrap: normal;
+}
+
+.main__navbar ul li a:hover {
+  color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+}
+
+.main__navbar ul li a:hover i {
+  color: var(--text-light);
+}
+
+.main__navbar ul li a.active {
+  color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+}
+
+.mobile__navbar {
+  display: none;
+}
+
+/*========================== MOBILE RESPONSIVE DESIGN  ===============*/
+.mobile__navbar {
+  display: none;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  background: linear-gradient(var(--primary-color), var(--primary-color-dark));
+}
+
+.mobile__menu {
+  padding: 1rem 2rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.mobile__menu span {
+  font-size: 1.1rem;
+  font-family: var(--logo-font);
+  font-weight: 500;
+  word-spacing: 5px;
+}
+
+.mobile__menu i {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.mobile__main_navbar {
+  display: none;
+  transform: translateY(100%);
+  transition: all 0.5s ease-in-out;
+}
+
+.mobile__main_navbar {
+  width: 100%;
+}
+
+.mobile__main_navbar ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.mobile__main_navbar ul li {
+  border-bottom: 1px solid var(--white);
+}
+
+.mobile__main_navbar ul li a {
+  padding: 1rem 2rem;
+  color: var(--white);
+  font-weight: 600;
+  font-size: 1.1rem;
+  display: block;
+  width: 100%;
+  transition: all 0.4s ease;
+}
+
+.mobile__main_navbar ul li a i {
+  font-size: 1rem;
+  color: var(--white);
+}
+
+.mobile__main_navbar ul li a:hover {
+  color: var(--primary-color-dark);
+}
+
+.mobile__main_navbar .nav__link__btn.active {
+  color: var(--primary-color-dark);
+}
+
+/* ================= smartphones responsive style ============= */
+
+@media (width < 540px) {
+  .nav__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobile__menu {
+    padding-inline: 1rem;
+  }
+
+  .mobile__main_navbar ul li a {
+    padding-inline: 1rem;
+  }
+
+  .logo__section {
+    border-right: none;
+    border-bottom: 1px solid var(--primary-color);
+    width: 100%;
+  }
+
+  .logo__section img {
+    width: 70%;
+  }
+
+  .logo__section h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (width < 720px) {
+  .top__bar .social__medias {
+    display: none;
+  }
+}
+
+/* ================= tablette responsive style ============= */
+
+@media (width < 1280px) {
+  .nav__content {
+    flex-direction: row;
+  }
+
+  .main__navbar {
+    display: none;
+  }
+
+  .top__bar {
+    border: none;
+    width: 100%;
+  }
+
+  .mobile__navbar {
+    display: flex;
+  }
+
+  .mobile__main_navbar.open {
+    display: block;
+    transform: translateY(0);
+  }
+}
+
+@media (width < 1286px) {
+  .main__navbar ul li a i {
+    display: none;
+  }
+
+  .main__navbar ul li {
+    padding-inline: 1rem;
+  }
+}
